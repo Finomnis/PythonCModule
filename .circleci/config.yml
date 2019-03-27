@@ -30,14 +30,6 @@ jobs:
         <<: *build_steps
         docker:
             - image: circleci/python:3.4
-    macos-3.6:
-        <<: *build_steps
-        macos:
-            - xcode: "9"
-    macos-3.7:
-        <<: *build_steps
-        macos:
-            - xcode: "10"
 
 workflows:
     version: 2
@@ -49,5 +41,3 @@ workflows:
             - python-3.6
             - python-3.5
             - python-3.4
-            - macos-3.6
-            - macos-3.7
