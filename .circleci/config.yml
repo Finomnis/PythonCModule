@@ -6,27 +6,27 @@ build_steps: &build_steps
         - run: python test.py
 
 jobs:
-    build-python-rc:
+    python-rc:
         <<: *build_steps
         docker:
             - image: circleci/python:rc
-    build-python-latest:
+    python-latest:
         <<: *build_steps
         docker:
             - image: circleci/python:latest
-    build-python-3.7:
+    python-3.7:
         <<: *build_steps
         docker:
             - image: circleci/python:3.7
-    build-python-3.6:
+    python-3.6:
         <<: *build_steps
         docker:
             - image: circleci/python:3.6
-    build-python-3.5:
+    python-3.5:
         <<: *build_steps
         docker:
             - image: circleci/python:3.5
-    build-python-3.4:
+    python-3.4:
         <<: *build_steps
         docker:
             - image: circleci/python:3.4
@@ -35,5 +35,9 @@ workflows:
     version: 2
     build:
         jobs:
-            - build-python-latest
-            - build-python-3.6
+            - python-rc
+            - python-latest
+            - python-3.7
+            - python-3.6
+            - python-3.5
+            - python-3.4
