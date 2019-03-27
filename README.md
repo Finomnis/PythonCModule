@@ -2,6 +2,9 @@
 A simple python module that acts as an interface for C code.
 
 ## Usage
+Before you add your own C modules, make sure that your system is set up correctly by executing the ``test.py`` script.
+If everything is correct, you should see a bunch of compiler commands and then ``Hello, world!``.
+
 To create your own C module, just copy and rename the ``helloWorldModule`` folder to wherever you want your module to be.
 
 Then, modify the ``__src`` folder contents:
