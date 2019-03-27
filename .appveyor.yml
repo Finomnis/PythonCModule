@@ -8,8 +8,6 @@ environment:
         - PYTHON: "C:\\Python37-x64"
         - PYTHON: "C:\\Python36-x64"
         - PYTHON: "C:\\Python35-x64"
-        - PYTHON: "C:\\Python34-x64"
-        - PYTHON: "C:\\Python33-x64"
 
 install:
     - "%PYTHON%\\python.exe -m venv venv"
