@@ -1,4 +1,4 @@
 os: osx
 
-script: python --version
+script: python3 --version
 
