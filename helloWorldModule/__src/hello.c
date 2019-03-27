@@ -1,0 +1,14 @@
+// In all C files, include it's corresponding header file in the very first line.
+// No need to include <Python.h> as we did that already in the header file.
+#include "hello.h"
+
+// Our function definition
+PyObject* hello(PyObject *self, PyObject *args) {
+    const char* name;
+    if (!PyArg_ParseTuple(args, "s", &name)) {
+        return NULL;
+    }
+
+    printf("Hello, %s!\n", name);
+    Py_RETURN_NONE;
+}
