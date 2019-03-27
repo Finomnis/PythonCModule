@@ -1,0 +1,13 @@
+environment:
+    matrix:
+        - PYTHON: "C:\\Python37"
+
+install:
+    - "%PYTHON%\\python.exe -m venv venv"
+
+build: off
+
+test_script:
+    - "%PYTHON\\python.exe --version"
+    - "venv\\bin\\activate.bat"
+    - "python --version"
