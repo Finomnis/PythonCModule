@@ -1,6 +1,7 @@
 environment:
     matrix:
         - PYTHON: "C:\\Python37"
+        - PYTHON: "C:\\Python36"
 
 install:
     - "%PYTHON%\\python.exe -m venv venv"
@@ -8,6 +9,6 @@ install:
 build: off
 
 test_script:
-    - "%PYTHON%\\python.exe --version"
     - "venv\\Scripts\\activate.bat"
     - "python --version"
+    - "python test.py"
