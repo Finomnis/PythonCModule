@@ -9,5 +9,5 @@ build: off
 
 test_script:
     - "%PYTHON%\\python.exe --version"
-    - "venv\\bin\\activate.bat"
+    - "venv\\Scripts\\activate.bat"
     - "python --version"
