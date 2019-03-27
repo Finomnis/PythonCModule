@@ -8,6 +8,6 @@ install:
 build: off
 
 test_script:
-    - "%PYTHON\\python.exe --version"
+    - "%PYTHON%\\python.exe --version"
     - "venv\\bin\\activate.bat"
     - "python --version"
