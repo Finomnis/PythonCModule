@@ -1,9 +1,16 @@
 version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/python:latest
-      - image: circleci/python:3.6
+
+build_steps: &build_steps
     steps:
-      - checkout
-      - run: python --version
+        - checkout
+        - run: python --version
+
+jobs:
+    "python-lastest":
+        <<: *build_steps
+        docker:
+            - image: circleci/python:latest
+    "python-3.6:"
+        <<: *build_steps
+        docker:
+            - image: circleci/python:3.6
