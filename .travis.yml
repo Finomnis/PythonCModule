@@ -1,3 +1,12 @@
 os: osx
 
-script: python3 test.py
+matrix:
+    include:
+        - os: osx
+          osx_image: xcode9.4
+        - os: osx
+          osx_image: xcode10.1
+
+script:
+    - python3 --version
+    - python3 test.py
