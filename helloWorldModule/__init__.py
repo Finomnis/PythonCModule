@@ -24,4 +24,4 @@ def __build():
 
 __build()
 
-from .__src.methods import *
+from .__src.wrappers import *
