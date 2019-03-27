@@ -4,8 +4,7 @@
 #include "hello.h"
 
 
-
-// Our function definition
+// Our function implementation
 PyObject* hello(PyObject *self, PyObject *args) {
     const char* name;
     if (!PyArg_ParseTuple(args, "s", &name)) {
@@ -13,5 +12,6 @@ PyObject* hello(PyObject *self, PyObject *args) {
     }
 
     printf("Hello, %s!\n", name);
-    Py_RETURN_NONE;
+    
+    return PyLong_FromLong(42);
 }

@@ -5,4 +5,4 @@ from .. import __lib
 # auto-completions to know our function definitions.
 
 def hello(name):
-    __lib.hello(name)
+    return __lib.hello(name)
