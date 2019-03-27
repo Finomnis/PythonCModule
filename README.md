@@ -4,6 +4,8 @@ A simple python module that acts as an interface for C code.
 It is specifically written and tested for Python 3.x, it does NOT work with Python 2.
 
 [![CircleCI](https://circleci.com/gh/Finomnis/PythonCModule.svg?style=svg)](https://circleci.com/gh/Finomnis/PythonCModule)
+[![Build status](https://ci.appveyor.com/api/projects/status/i2vbur3oauom6j4m?svg=true)](https://ci.appveyor.com/project/Finomnis/pythoncmodule)
+[![Build Status](https://travis-ci.org/Finomnis/PythonCModule.svg?branch=master)](https://travis-ci.org/Finomnis/PythonCModule)
 
 ## Features
 Using this template as a basis for custom C modules has the following advantages:
@@ -23,3 +25,12 @@ Then, modify the ``__src`` folder contents:
 * Put your methods in header and source file combinations. Try to mimik the style of ``hello.h`` and ``hello.c``.
 * Adjust ``module.c`` to include your function headers and add your functions to the ``methods`` array.
 * Add python wrappers for your functions to ``wrappers.py``.
+
+## Tested Python Versions
+
+| Operating System | Python Version |
+| ---------------- |:--------------:|
+| Windows          | &ge; 3.3       |
+| Windows (x64)    | &ge; 3.5       |
+| Linux            | &ge; 3.4       |
+| Mac OS           | &ge; 3.6       |
