@@ -5,12 +5,12 @@ build_steps: &build_steps
         - checkout
         - run: python --version
 
+
 jobs:
     "python-lastest":
-        <<: *build_steps
         docker:
             - image: circleci/python:latest
-    "python-3.6:"
+    "python-3.6":
         <<: *build_steps
         docker:
             - image: circleci/python:3.6
