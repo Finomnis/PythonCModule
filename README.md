@@ -6,7 +6,7 @@ It is specifically written and tested for Python 3.x, it does NOT work with Pyth
 [![CircleCI](https://circleci.com/gh/Finomnis/PythonCModule.svg?style=svg)](https://circleci.com/gh/Finomnis/PythonCModule)
 
 ## Usage
-Before you add your own C modules, make sure that your system is set up correctly by executing the ``test.py`` script.
+Before you create your own C modules, make sure that your system is set up correctly by executing the ``test.py`` script.
 If everything is correct, you should see a bunch of compiler commands and then ``Hello, world!``.
 
 To create your own C module, just copy and rename the ``helloWorldModule`` folder to wherever you want your module to be.
