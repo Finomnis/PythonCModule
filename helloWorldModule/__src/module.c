@@ -1,4 +1,5 @@
-// Always include Python.h in the very first line in all files.
+// Always include Python.h in the very first line of all header files and module.c
+// In general, make sure that you include Python.h BEFORE all other header files.
 #include <Python.h>
 
 
