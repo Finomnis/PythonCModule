@@ -12,7 +12,7 @@ Using this template as a basis for custom C modules has the following advantages
 * Automatic building, no explicit compilation necessary
 * Automatic rebuilding when C code has changed
 * Compatibility with IDEs like PyCharm
-* Compiler agnostic, due to the usage of python's setuptools
+* Automatic compiler detection, due to the usage of python's setuptools
 * Very small and easy to understand
 
 ## Usage
