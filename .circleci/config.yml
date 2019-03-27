@@ -12,11 +12,9 @@ jobs:
         steps:
             - run: "python --version"
     build-python-3.6:
-        #<<: *build_steps
+        <<: *build_steps
         docker:
             - image: circleci/python:3.6
-        steps:
-            - run: "python --version"
 
 workflows:
     version: 2
