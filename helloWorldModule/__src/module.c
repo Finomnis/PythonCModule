@@ -9,7 +9,6 @@
 // Function includes, add new headers for the functions you write
 #include "hello.h"
 
-
 // Add functions to the external interface of the compiled library.
 static PyMethodDef methods[] = {
     {"hello", hello, METH_VARARGS, NULL},
