@@ -8,7 +8,7 @@ matrix:
           osx_image: xcode10.1
 
 install:
-    - pip install pybind11
+    - pip3 install pybind11
 
 script:
     - python3 --version
