@@ -3,6 +3,7 @@ version: 2
 build_steps: &build_steps
     steps:
         - checkout
+        - run: pip install pybind11
         - run: python3 test.py
         - run: python3 testCpp.py
 
