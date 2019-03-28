@@ -4,6 +4,7 @@ build_steps: &build_steps
     steps:
         - checkout
         - run: python3 test.py
+        - run: python3 testCpp.py
 
 jobs:
     python-rc:

@@ -10,3 +10,4 @@ matrix:
 script:
     - python3 --version
     - python3 test.py
+    - python3 testCpp.py

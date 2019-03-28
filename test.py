@@ -2,8 +2,6 @@
 
 import helloWorldModule
 
-result = helloWorldModule.hello("world")
-
-# Check result, used for verification in automatic test
+result = helloWorldModule.hello(name="world")
 assert(result==42)
 
