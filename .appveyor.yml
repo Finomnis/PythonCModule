@@ -17,5 +17,6 @@ build: off
 test_script:
     - "venv\\Scripts\\activate.bat"
     - "python --version"
+    - "pip install pybind11"
     - "python test.py"
     - "python testCpp.py"
