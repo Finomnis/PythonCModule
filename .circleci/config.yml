@@ -3,9 +3,7 @@ version: 2
 build_steps: &build_steps
     steps:
         - checkout
-        - run: python3 -m venv venv
-        - run: . venv/bin/activate
-        - run: pip install pybind11
+        - run: sudo pip install pybind11
         - run: python test.py
         - run: python testCpp.py
 
