@@ -81,7 +81,7 @@ def build():
 
         os.chdir(modulePath)
 
-        sources = glob.glob('__src/*.cpp')
+        sources = glob.glob('__src/**/*.cpp', recursive=True)
         # print("   Sources:", sources)
 
         module1 = Extension('__lib',

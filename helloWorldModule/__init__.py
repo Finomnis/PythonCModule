@@ -12,7 +12,7 @@ def __build():
     
         __os.chdir(modulePath)
     
-        sources = __glob.glob('__src/*.c')
+        sources = __glob.glob('__src/**/*.c', recursive=True)
         #print("   Sources:", sources)
     
         module1 = __extension('__lib',
