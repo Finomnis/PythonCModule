@@ -96,7 +96,7 @@ def build():
 
         setup(name='__lib',
               ext_modules=[module1],
-              script_args=["build_ext", "--inplace"],
+              script_args=["build_ext", "--inplace", "-q"],
               cmdclass={'build_ext': BuildExt}
               )
 
