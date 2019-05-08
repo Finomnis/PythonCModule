@@ -11,6 +11,7 @@ environment:
 
     matrix:
         - CONDA: "C:\\Miniconda34"
+          PYTHON_VERISON: "3.4"
         #- CONDA: "C:\\Miniconda35"
         #- CONDA: "C:\\Miniconda36"
         - CONDA: "C:\\Miniconda37"
@@ -18,11 +19,10 @@ environment:
 install:
     # CONDA
     - if "%PLATFORM%" == "x64" set CONDA=%CONDA%-x64
-    - set PATH=%CONDA%\\Scripts;%PATH%
+    - set PATH=%CONDA;\%CONDA%\Scripts;%PATH%
     - echo %CONDA%
-    #- conda create -h
-    #- conda create -n build -y setuptools
-    #- activate build
+    - conda create -y -n build python=%PYTHON_VERSION%
+    - activate build
     - conda install -y -c conda-forge setuptools-rust pybind11
     # RUST
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
