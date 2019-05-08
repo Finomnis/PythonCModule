@@ -1,4 +1,5 @@
 __pycache__
 /__lib*.so
+/__lib*.pyd
 /build/
 *.pyc
