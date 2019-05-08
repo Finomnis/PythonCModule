@@ -5,13 +5,11 @@ cache:
 
 platform:
     - x64
-    #- x86
+    - x86
 
 environment:
 
     matrix:
-        - CONDA: "C:\\Miniconda34"
-          PYTHON_VERSION: "3.4"
         - CONDA: "C:\\Miniconda35"
           PYTHON_VERSION: "3.5"
         - CONDA: "C:\\Miniconda36"
@@ -40,6 +38,7 @@ install:
 build: off
 
 test_script:
-    - if "%PLATFORM%" == "x64" if DEFINED BUILD_RUST (python testRust.py)
+    #- if "%PLATFORM%" == "x64" if DEFINED BUILD_RUST (python testRust.py)
+    #- python testRust.py
     - python test.py
     - python testCpp.py
