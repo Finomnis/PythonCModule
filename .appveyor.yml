@@ -16,7 +16,7 @@ platform:
     - x86
 
 install:
-    - if "%PLATFORM" == "x64" set CONDA=%CONDA%-x64
+    - if "%PLATFORM%" == "x64" set CONDA=%CONDA%-x64
     - echo %CONDA%
     - call %CONDA%\\Scripts\\activate.bat
     - conda create -y --name build python=%PYTHON_VERSION%
@@ -32,6 +32,6 @@ install:
 build: off
 
 test_script:
-    - if "%PLATFORM" == "x64" (python testRust.py) else (echo "Skipped, doesn't work on x86.")
+    - if "%PLATFORM%" == "x64" (python testRust.py) else (echo "Skipped, doesn't work on x86.")
     - python test.py
     - python testCpp.py
