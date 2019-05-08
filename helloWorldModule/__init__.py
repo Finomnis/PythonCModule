@@ -20,7 +20,7 @@ def __build():
 
         __setup(name='__lib',
                 ext_modules=[module1],
-                script_args=["build_ext", "--inplace", "-q"])
+                script_args=["-q", "build_ext", "--inplace"])
 
     finally:
         __os.chdir(cwd_bup)
