@@ -10,9 +10,10 @@ platform:
 environment:
 
     matrix:
-        - CONDA: "C:\\Miniconda34"
-          PYTHON_VERSION: "3.4"
-        #- CONDA: "C:\\Miniconda35"
+        #- CONDA: "C:\\Miniconda34"
+        #  PYTHON_VERSION: "3.4"
+        - CONDA: "C:\\Miniconda35"
+          PYTHON_VERSION: "3.5"
         #- CONDA: "C:\\Miniconda36"
         - CONDA: "C:\\Miniconda37"
           PYTHON_VERSION: "3.7"
