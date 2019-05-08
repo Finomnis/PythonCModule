@@ -18,7 +18,8 @@ environment:
 install:
     - if "%PLATFORM%" == "x64" set CONDA=%CONDA%-x64
     - echo %CONDA%
-    - call %CONDA%\\Scripts\\activate.bat root
+    - call %CONDA%\\Scripts\\conda.exe create -y --name build
+    - call %CONDA%\\Scripts\\activate.bat build
     - conda install -y setuptools pybind11
     - conda install -y -c conda-forge setuptools-rust
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
