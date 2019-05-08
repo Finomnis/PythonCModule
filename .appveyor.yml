@@ -1,5 +1,8 @@
 image: Visual Studio 2015
 
+cache:
+    - "%USERPROFILE%\\.cargo\\registry"
+
 platform:
     - x86
     - x64
@@ -14,9 +17,8 @@ environment:
 
 install:
     - call %CONDA%\\Scripts\\activate.bat
-    - conda config --add channels conda-forge
-    - conda install -y setuptools setuptools-rust pybind11
-    - conda update -y --all
+    - conda install setuptools pybind11
+    - conda install -c setuptools-rust
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
     - rustup-init -y --default-toolchain nightly
     - set PATH=%PATH%;%USERPROFILE%\\.cargo\\bin
