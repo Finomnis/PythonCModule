@@ -5,22 +5,24 @@ cache:
 
 platform:
     - x64
-    - x86
+    #- x86
 
 environment:
-    CONDA: "C:\\Miniconda37"
+
     matrix:
-        - PYTHON_VERSION: "3.4"
-        - PYTHON_VERSION: "3.5"
-        - PYTHON_VERSION: "3.6"
-        - PYTHON_VERSION: "3.7"
+        - CONDA: "C:\\Miniconda34"
+        #- CONDA: "C:\\Miniconda35"
+        #- CONDA: "C:\\Miniconda36"
+        #- CONDA: "C:\\Miniconda37"
 
 install:
     - if "%PLATFORM%" == "x64" set CONDA=%CONDA%-x64
     - echo %CONDA%
-    - call %CONDA%\\Scripts\\activate.bat
+    - "%CONDA%\\Scripts\\conda.exe" env list
+    - call %CONDA%\\Scripts\\activate.bat base
     - conda create -y --name build python=%PYTHON_VERSION%
-    - conda activate build
+    - deactivate
+    - call %CONDA%\\Scripts\\activate.bat build
     - conda install -y setuptools pybind11
     - conda install -y -c conda-forge setuptools-rust
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
