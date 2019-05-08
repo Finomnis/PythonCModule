@@ -19,7 +19,7 @@ install:
     - conda install -y setuptools pybind11
     - conda install -y -c conda-forge setuptools-rust
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
-    - ps: if ($env:CONDA -like '*-x64') {rustup-init -y --default-toolchain nightly} else {echo "Skipped."}
+    - ps: if ($env:CONDA -like '*-x64') {.\\rustup-init -y --default-toolchain nightly} else {echo "Skipped."}
     - set PATH=%PATH%;%USERPROFILE%\\.cargo\\bin
     - conda info
 
