@@ -4,30 +4,34 @@ cache:
     - "%USERPROFILE%\\.cargo\\registry"
 
 environment:
+    - CONDA: "C:\\Miniconda37"
     matrix:
-        - CONDA: "C:\\Miniconda34-x64"
-        - CONDA: "C:\\Miniconda35-x64"
-        - CONDA: "C:\\Miniconda36-x64"
-        - CONDA: "C:\\Miniconda37-x64"
-        - CONDA: "C:\\Miniconda34"
-        - CONDA: "C:\\Miniconda35"
-        - CONDA: "C:\\Miniconda36"
-        - CONDA: "C:\\Miniconda37"
+        - PYTHON_VERSION: "3.7"
+        - PYTHON_VERSION: "3.6"
+        - PYTHON_VERSION: "3.5"
+        - PYTHON_VERSION: "3.4"
+
+platform:
+    - x64
+    - x86
 
 install:
-    - dir %CONDA%\\envs
-    - call %CONDA%\\condabin\\conda.bat create -y --name default
-    - call %CONDA%\\Scripts\\activate.bat default
+    - if "%PLATFORM" == "x64" set CONDA=%CONDA%-x64
+    - echo %CONDA%
+    - call %CONDA%\\Scripts\\activate.bat
+    - conda create -y --name build python=%PYTHON_VERSION%
+    - conda activate build
     - conda install -y setuptools pybind11
     - conda install -y -c conda-forge setuptools-rust
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
     - rustup-init -y --default-toolchain nightly
     - set PATH=%PATH%;%USERPROFILE%\\.cargo\\bin
     - conda info
+    - python --version
 
 build: off
 
 test_script:
-    - if "%CONDA:~-4%" equ "-x64" (python testRust.py) else (echo "Skipped, doesn't work on x86.")
+    - if "%PLATFORM" == "x64" (python testRust.py) else (echo "Skipped, doesn't work on x86.")
     - python test.py
     - python testCpp.py
