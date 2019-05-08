@@ -5,12 +5,10 @@ build_steps: &build_steps
         - checkout
         - run: wget --content-disposition https://sh.rustup.rs
         - run: sh rustup-init.sh -y --default-toolchain nightly
-        - run: source $HOME/.cargo/env
         - run: sudo pip install setuptools setuptools-rust pybind11
-        - run: echo "$PATH"
         - run: python test.py
         - run: python testCpp.py
-        - run: python testRust.py
+        - run: source ~/.cargo/env; python testRust.py
 
 jobs:
     python-rc:
