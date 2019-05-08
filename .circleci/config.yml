@@ -10,6 +10,14 @@ build_steps: &build_steps
         - run: python testCpp.py
         - run: source ~/.cargo/env; python testRust.py
 
+build_steps: &build_steps_rust
+    steps:
+        - checkout
+        - run: wget --content-disposition https://sh.rustup.rs
+        - run: sh rustup-init.sh -y --default-toolchain nightly
+        - run: sudo pip install setuptools setuptools-rust
+        - run: source ~/.cargo/env; python testRust.py
+
 jobs:
     python-rc:
         <<: *build_steps
@@ -32,7 +40,7 @@ jobs:
         docker:
             - image: circleci/python:3.5
     python-3.4:
-        <<: *build_steps
+        <<: *build_steps_rust
         docker:
             - image: circleci/python:3.4
 
@@ -45,3 +53,4 @@ workflows:
             - python-3.7
             - python-3.6
             - python-3.5
+            - python-3.4
