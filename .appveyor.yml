@@ -10,13 +10,16 @@ platform:
 environment:
 
     matrix:
-        #- CONDA: "C:\\Miniconda34"
-        #  PYTHON_VERSION: "3.4"
+        - CONDA: "C:\\Miniconda34"
+          PYTHON_VERSION: "3.4"
         - CONDA: "C:\\Miniconda35"
           PYTHON_VERSION: "3.5"
-        #- CONDA: "C:\\Miniconda36"
+        - CONDA: "C:\\Miniconda36"
+          PYTHON_VERSION: "3.6"
+          BUILD_RUST: True
         - CONDA: "C:\\Miniconda37"
           PYTHON_VERSION: "3.7"
+          BUILD_RUST: True
 
 install:
     # CONDA
@@ -37,6 +40,6 @@ install:
 build: off
 
 test_script:
-    - if "%PLATFORM%" == "x64" (python testRust.py) else (echo "Skipped, doesn't work on x86.")
+    - if "%PLATFORM%" == "x64" if DEFINED BUILD_RUST (python testRust.py)
     - python test.py
     - python testCpp.py
