@@ -6,6 +6,7 @@ build_steps: &build_steps
         - run: sudo pip install pybind11
         - run: python test.py
         - run: python testCpp.py
+        - run: python testRust.py
 
 jobs:
     python-rc:
