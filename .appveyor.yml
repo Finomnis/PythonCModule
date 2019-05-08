@@ -15,7 +15,7 @@ environment:
         - CONDA: "C:\\Miniconda37"
 
 install:
-    - %CONDA%\\condabin\\conda.bat create -y --name default
+    - "%CONDA%\\condabin\\conda.bat create -y --name default"
     - call %CONDA%\\Scripts\\activate.bat default
     - conda install -y setuptools pybind11
     - conda install -y -c conda-forge setuptools-rust
