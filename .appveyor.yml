@@ -20,7 +20,7 @@ environment:
 install:
     # CONDA
     - if "%PLATFORM%" == "x64" set CONDA=%CONDA%-x64
-    - set PATH=%CONDA;\%CONDA%\Scripts;%PATH%
+    - set PATH=%CONDA%;\%CONDA%\Scripts;%PATH%
     - echo %CONDA%
     - conda create -y -n build python=%PYTHON_VERSION%
     - activate build
