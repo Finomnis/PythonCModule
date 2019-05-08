@@ -1,5 +1,5 @@
 # PythonCModule
-A simple python module that acts as an interface for C/C++ code.
+A simple python module that acts as an interface for C/C++/Rust code.
 
 It is specifically written and tested for Python 3.x, it does NOT work with Python 2.
 
@@ -8,9 +8,9 @@ It is specifically written and tested for Python 3.x, it does NOT work with Pyth
 [![Build Status](https://travis-ci.org/Finomnis/PythonCModule.svg?branch=master)](https://travis-ci.org/Finomnis/PythonCModule)
 
 ## Features
-Using this template as a basis for custom C modules has the following advantages:
+Using this template as a basis for custom C/C++/Rust modules has the following advantages:
 * Automatic building, no explicit compilation necessary
-* Automatic rebuilding when C code has changed
+* Automatic rebuilding when code has changed
 * Compatibility with IDEs like PyCharm
 * Automatic compiler detection, due to the usage of python's setuptools
 * Very small and easy to understand
