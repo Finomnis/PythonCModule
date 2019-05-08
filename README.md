@@ -50,7 +50,7 @@ The C++ version needs the following libraries:
 * setuptools
 * setuptools-rust
 
-Also, you obviously need a rust distribution that is compatible with pyo3.
+Also, you need a rust distribution that is compatible with pyo3.
 (At the time of writing, this is rust nightly. Should change in future.)
 
 To create your own Rust module, just copy and rename the ``helloWorldRustModule`` folder to wherever you want your module to be.
