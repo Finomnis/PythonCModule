@@ -10,7 +10,7 @@ build_steps: &build_steps
         - run: python testCpp.py
         - run: source ~/.cargo/env; python testRust.py
 
-build_steps: &build_steps_rust
+build_steps_rust: &build_steps_rust
     steps:
         - checkout
         - run: wget --content-disposition https://sh.rustup.rs
