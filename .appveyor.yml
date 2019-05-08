@@ -6,8 +6,8 @@ platform:
 
 environment:
     matrix:
-        - CONDA: "C:\\Miniconda35"
-        - CONDA: "C:\\Miniconda35-x64"
+        - CONDA: "C:\\Miniconda36"
+        - CONDA: "C:\\Miniconda36-x64"
         #- CONDA: "C:\\Miniconda36"
         #- CONDA: "C:\\Miniconda35"
         #- CONDA: "C:\\Miniconda34"
