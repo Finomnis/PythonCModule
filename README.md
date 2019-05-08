@@ -67,4 +67,4 @@ Then, modify the ``__src`` folder contents:
 | Windows          | &ge; 3.5  | &ge; 3.5  |          |
 | Windows (x64)    | &ge; 3.5  | &ge; 3.5  |          |
 | Linux            | &ge; 3.5  | &ge; 3.5  | &ge; 3.5 |
-| Mac OS           | &ge; 3.6  | &ge; 3.6  |          |
+| Mac OS           | &ge; 3.6  | &ge; 3.6  | &ge; 3.6 |
