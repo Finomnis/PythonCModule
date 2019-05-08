@@ -7,6 +7,7 @@ build_steps: &build_steps
         - run: sh rustup-init.sh -y --default-toolchain nightly
         - run: source $HOME/.cargo/env
         - run: sudo pip install setuptools setuptools-rust pybind11
+        - run: echo "$PATH"
         - run: python test.py
         - run: python testCpp.py
         - run: python testRust.py
@@ -41,8 +42,8 @@ workflows:
     version: 2
     build:
         jobs:
-            - python-rc
+            #- python-rc
             - python-latest
-            - python-3.7
-            - python-3.6
-            - python-3.5
+            #- python-3.7
+            #- python-3.6
+            #- python-3.5
