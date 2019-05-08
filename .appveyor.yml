@@ -19,7 +19,7 @@ install:
     - if "%PLATFORM%" == "x64" set CONDA=%CONDA%-x64
     - echo %CONDA%
     - call %CONDA%\\Scripts\\conda.exe create -h
-    - call %CONDA%\\Scripts\\conda.exe create -n test -y
+    - call %CONDA%\\Scripts\\conda.exe create -n build -y setuptools pybind11
     - call %CONDA%\\Scripts\\activate.bat build
     - conda install -y setuptools pybind11
     - conda install -y -c conda-forge setuptools-rust
