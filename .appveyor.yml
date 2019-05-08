@@ -1,6 +1,9 @@
+image: Visual Studio 2015
+
 environment:
     matrix:
-        - PYTHON: "C:\\Python37"
+        - CONDA: "C:\\Miniconda37"
+        #- PYTHON: "C:\\Python37"
         #- PYTHON: "C:\\Python36"
         #- PYTHON: "C:\\Python35"
         #- PYTHON: "C:\\Python37-x64"
@@ -8,19 +11,20 @@ environment:
         #- PYTHON: "C:\\Python35-x64"
 
 install:
-    - "appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe"
-    - "rustup-init -y --default-toolchain nightly"
-    - "set PATH=%PATH%;%USERPROFILE%\\.cargo\\bin"
-    - "%PYTHON%\\python.exe -m venv venv"
+    - call %CONDA%\\Scripts\\activate.bat
+    - conda config --add channels conda-forge
+    - conda install setuptools setuptools-rust pybind11
+    - conda update --all
+    - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
+    - rustup-init -y --default-toolchain nightly
+    - set PATH=%PATH%;%USERPROFILE%\\.cargo\\bin
+    - python --version
+    - rustc -vV
+    - cargo -vV
 
 build: off
 
 test_script:
-    - "venv\\Scripts\\activate.bat"
-    - "python --version"
-    - "rustc -vV"
-    - "cargo -vV"
-    - "pip install setuptools setuptools-rust pybind11"
-    - "python test.py"
-    - "python testCpp.py"
-    - "python testRust.py"
+    - python test.py
+    - python testCpp.py
+    - python testRust.py
