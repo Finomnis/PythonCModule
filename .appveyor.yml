@@ -20,7 +20,7 @@ test_script:
     - "python --version"
     - "rustc -vV"
     - "cargo -vV"
-    - "pip install pybind11"
+    - "pip install setuptools setuptools-rust pybind11"
     - "python test.py"
     - "python testCpp.py"
     - "python testRust.py"
