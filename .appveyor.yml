@@ -26,6 +26,6 @@ install:
 build: off
 
 test_script:
-    - ps: if ($env:CONDA -like '*-x64') {python testRust.py} else {echo "Skipped, doesn't work on x86."}
+    - if "%CONDA:~-4%" equ "-x64" (python testRust.py) else (echo "Skipped, doesn't work on x86.")
     - python test.py
     - python testCpp.py
