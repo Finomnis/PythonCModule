@@ -13,8 +13,8 @@ environment:
 install:
     - call %CONDA%\\Scripts\\activate.bat
     - conda config --add channels conda-forge
-    - conda install setuptools setuptools-rust pybind11
-    - conda update --all
+    - conda install -y setuptools setuptools-rust pybind11
+    - conda update -y --all
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
     - rustup-init -y --default-toolchain nightly
     - set PATH=%PATH%;%USERPROFILE%\\.cargo\\bin
