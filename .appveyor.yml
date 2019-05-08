@@ -15,6 +15,7 @@ install:
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
     - rustup-init -y --default-toolchain nightly
     - set PATH=%PATH%;%USERPROFILE%\\.cargo\\bin
+    - conda info
     - python --version
     - rustc -vV
     - cargo -vV
