@@ -5,7 +5,7 @@ build_steps: &build_steps
         - checkout
         - run: wget --content-disposition https://sh.rustup.rs
         - run: sh rustup-init.sh -y --default-toolchain nightly
-        - run: . $HOME/.cargo/env
+        - run: source $HOME/.cargo/env
         - run: sudo pip install setuptools setuptools-rust pybind11
         - run: python test.py
         - run: python testCpp.py
