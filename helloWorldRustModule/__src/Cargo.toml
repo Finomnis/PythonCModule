@@ -9,6 +9,10 @@ crate_type = ["cdylib"]
 
 [dependencies]
 numpy = "0.5.0"
+ndarray = "0.12.1"
+
+## Add your additional dependencies here
+
 
 [dependencies.pyo3]
 version = "0.6.0"
