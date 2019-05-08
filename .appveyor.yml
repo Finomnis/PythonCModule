@@ -18,7 +18,7 @@ environment:
 install:
     - if "%PLATFORM%" == "x64" set CONDA=%CONDA%-x64
     - echo %CONDA%
-    - "%CONDA%\\Scripts\\conda.exe" env list
+    - call %CONDA%\\Scripts\\conda.exe env list
     - call %CONDA%\\Scripts\\activate.bat base
     - conda create -y --name build python=%PYTHON_VERSION%
     - deactivate
