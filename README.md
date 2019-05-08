@@ -18,7 +18,7 @@ Using this template as a basis for custom C modules has the following advantages
 ## Usage
 ### C
 Before you create your own C modules, you can verify that your system is set up correctly by executing the ``test.py`` script.
-If everything is correct, you should see a bunch of compiler commands followed by ``Hello, world!``.
+If everything is correct, you should see ``Hello, world!`` and no error message.
 
 To create your own C module, just copy and rename the ``helloWorldModule`` folder to wherever you want your module to be.
 
@@ -29,7 +29,7 @@ Then, modify the ``__src`` folder contents:
 
 ### C++
 Before you create your own C++ modules, you can verify that your system is set up correctly by executing the ``testCpp.py`` script.
-If everything is correct, you should see a bunch of compiler commands followed by ``Hello, world!``.
+If everything is correct, you should see ``Hello, world!`` and no error message.
 
 The C++ version needs the following libraries:
 * setuptools
@@ -44,7 +44,7 @@ Then, modify the ``__src`` folder contents:
 
 ### Rust
 Before you create your own Rust modules, you can verify that your system is set up correctly by executing the ``testRust.py`` script.
-If everything is correct, you should see a bunch of compiler commands followed by ``Hello, world!``.
+If everything is correct, you should see ``Hello, world!`` and no error message.
 
 The C++ version needs the following libraries:
 * setuptools
