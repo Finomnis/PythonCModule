@@ -3,34 +3,29 @@ image: Visual Studio 2015
 cache:
     - "%USERPROFILE%\\.cargo\\registry"
 
-platform:
-    - x86
-    - x64
-
 environment:
     matrix:
-        - CONDA: "C:\\Miniconda36"
+        - CONDA: "C:\\Miniconda37-x64"
         - CONDA: "C:\\Miniconda36-x64"
-        #- CONDA: "C:\\Miniconda36"
-        #- CONDA: "C:\\Miniconda35"
-        #- CONDA: "C:\\Miniconda34"
+        - CONDA: "C:\\Miniconda35-x64"
+        - CONDA: "C:\\Miniconda34-x64"
+        - CONDA: "C:\\Miniconda37"
+        - CONDA: "C:\\Miniconda36"
+        - CONDA: "C:\\Miniconda35"
+        - CONDA: "C:\\Miniconda34"
 
 install:
     - call %CONDA%\\Scripts\\activate.bat
     - conda install -y setuptools pybind11
     - conda install -y -c conda-forge setuptools-rust
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
-    - rustup-init -y --default-toolchain nightly
+    - ps: if ($env:CONDA -like '*-x64') {rustup-init -y --default-toolchain nightly} else {echo "Skipped."}
     - set PATH=%PATH%;%USERPROFILE%\\.cargo\\bin
     - conda info
-    - python --version
-    - rustc -vV
-    - cargo -vV
 
 build: off
 
 test_script:
+    - ps: if ($env:CONDA -like '*-x64') {python testRust.py} else {echo "Skipped, doesn't work on x86."}
     - python test.py
     - python testCpp.py
-    - python testRust.py
-    - ps: if ($env:CONDA -like '*-x64') {"Yes!"} else {echo "Skipped, doesn't work on x86."}
