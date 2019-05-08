@@ -69,7 +69,7 @@ For more information about how to write Rust code that interfaces with Python, r
 
 | Operating System |     C     |    C++    |   Rust   |
 | ---------------- |:---------:|:---------:|:--------:|
-| Windows          | &ge; 3.5  | &ge; 3.5  |          |
-| Windows (x64)    | &ge; 3.5  | &ge; 3.5  |          |
+| Windows          | &ge; 3.5  | &ge; 3.5  |    --    |
+| Windows (x64)    | &ge; 3.5  | &ge; 3.5  | &ge; 3.6 |
 | Linux            | &ge; 3.5  | &ge; 3.5  | &ge; 3.5 |
 | Mac OS           | &ge; 3.6  | &ge; 3.6  | &ge; 3.6 |
