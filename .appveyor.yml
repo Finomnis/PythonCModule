@@ -21,7 +21,7 @@ install:
     - echo %CONDA%
     - conda create -h
     - conda create -n build -y setuptools
-    - conda activate build
+    - activate build
     - conda install -y setuptools pybind11
     - conda install -y -c conda-forge setuptools-rust
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
