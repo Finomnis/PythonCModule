@@ -38,7 +38,6 @@ install:
 build: off
 
 test_script:
-    #- if "%PLATFORM%" == "x64" if DEFINED BUILD_RUST (python testRust.py)
-    - python testRust.py
+    - if "%PLATFORM%" == "x64" if DEFINED BUILD_RUST (python testRust.py)
     - python test.py
     - python testCpp.py
