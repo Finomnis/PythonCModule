@@ -24,6 +24,7 @@ install:
 build: off
 
 test_script:
-    - python testRust.py
+    - ps: Get-ChildItem Env:
     - python test.py
     - python testCpp.py
+    - python testRust.py
