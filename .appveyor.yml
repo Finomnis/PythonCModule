@@ -6,8 +6,8 @@ platform:
 
 environment:
     matrix:
-        - CONDA: "C:\\Miniconda37"
-        - CONDA: "C:\\Miniconda37-x64"
+        - CONDA: "C:\\Miniconda35"
+        - CONDA: "C:\\Miniconda35-x64"
         #- CONDA: "C:\\Miniconda36"
         #- CONDA: "C:\\Miniconda35"
         #- CONDA: "C:\\Miniconda34"
@@ -28,7 +28,7 @@ install:
 build: off
 
 test_script:
-    - ps: "Get-ChildItem Env:"
     - python test.py
     - python testCpp.py
     - python testRust.py
+    - ps: if ($env:CONDA -like '*-x64') {"Yes!"} else {echo "Skipped, doesn't work on x86."}
