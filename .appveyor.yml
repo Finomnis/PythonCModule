@@ -3,17 +3,17 @@ image: Visual Studio 2015
 cache:
     - "%USERPROFILE%\\.cargo\\registry"
 
-environment:
-    CONDA: "C:\\Miniconda37"
-    matrix:
-        - PYTHON_VERSION: "3.7"
-        - PYTHON_VERSION: "3.6"
-        - PYTHON_VERSION: "3.5"
-        - PYTHON_VERSION: "3.4"
-
 platform:
     - x64
     - x86
+
+environment:
+    CONDA: "C:\\Miniconda37"
+    matrix:
+        - PYTHON_VERSION: "3.4"
+        - PYTHON_VERSION: "3.5"
+        - PYTHON_VERSION: "3.6"
+        - PYTHON_VERSION: "3.7"
 
 install:
     - if "%PLATFORM%" == "x64" set CONDA=%CONDA%-x64
