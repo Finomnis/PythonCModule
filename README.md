@@ -31,7 +31,7 @@ Then, modify the ``__src`` folder contents:
 Before you create your own C++ modules, you can verify that your system is set up correctly by executing the ``testCpp.py`` script.
 If everything is correct, you should see ``Hello, world!`` and no error message.
 
-The C++ version needs the following libraries:
+The C++ version needs the following Python libraries:
 * setuptools
 * pybind11
 
@@ -46,7 +46,7 @@ Then, modify the ``__src`` folder contents:
 Before you create your own Rust modules, you can verify that your system is set up correctly by executing the ``testRust.py`` script.
 If everything is correct, you should see ``Hello, world!`` and no error message.
 
-The Rust version needs the following libraries:
+The Rust version needs the following Python libraries:
 * setuptools
 * setuptools-rust
 
