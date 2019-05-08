@@ -59,6 +59,11 @@ Then, modify the ``__src`` folder contents:
 * Modify the folder like a normal cargo project. It is important that the module stays ``__lib``, though.
 * Add python wrappers for your functions to ``wrappers.py``.
 
+For more information about how to write Rust code that interfaces with Python, read:
+* https://pyo3.rs/
+* https://rust-numpy.github.io/rust-numpy
+* https://docs.rs/ndarray/
+
 
 ## Tested Python Versions
 
