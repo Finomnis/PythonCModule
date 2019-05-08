@@ -50,8 +50,8 @@ The Rust version needs the following Python libraries:
 * setuptools
 * setuptools-rust
 
-Also, you need a rust distribution that is compatible with pyo3.
-(At the time of writing, this is rust nightly. Should change in future.)
+Also, you need a Rust distribution that is compatible with pyo3.
+(At the time of writing, this is Rust nightly. Should change in future.)
 
 To create your own Rust module, just copy and rename the ``helloWorldRustModule`` folder to wherever you want your module to be.
 
