@@ -14,9 +14,10 @@ matrix:
           osx_image: xcode10.1
 
 install:
-    - pip3 install pybind11
+    - pip3 install setuptools setuptools-rust pybind11
 
 script:
     - python3 --version
     - python3 test.py
     - python3 testCpp.py
+    - python3 testRust.py
