@@ -62,9 +62,9 @@ Then, modify the ``__src`` folder contents:
 
 ## Tested Python Versions
 
-| Operating System | Python Version (C) | Python Version (C++) |
-| ---------------- |:------------------:|:--------------------:|
-| Windows          | &ge; 3.5           | &ge; 3.5             |
-| Windows (x64)    | &ge; 3.5           | &ge; 3.5             |
-| Linux            | &ge; 3.5           | &ge; 3.5             |
-| Mac OS           | &ge; 3.6           | &ge; 3.6             |
+| Operating System |     C     |    C++    |   Rust   |
+| ---------------- |:---------:|:---------:|:--------:|
+| Windows          | &ge; 3.5  | &ge; 3.5  |          |
+| Windows (x64)    | &ge; 3.5  | &ge; 3.5  |          |
+| Linux            | &ge; 3.5  | &ge; 3.5  | &ge; 3.5 |
+| Mac OS           | &ge; 3.6  | &ge; 3.6  |          |
