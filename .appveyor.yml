@@ -5,17 +5,18 @@ cache:
 
 environment:
     matrix:
-        - CONDA: "C:\\Miniconda37-x64"
-        - CONDA: "C:\\Miniconda36-x64"
-        - CONDA: "C:\\Miniconda35-x64"
         - CONDA: "C:\\Miniconda34-x64"
-        - CONDA: "C:\\Miniconda37"
-        - CONDA: "C:\\Miniconda36"
-        - CONDA: "C:\\Miniconda35"
+        - CONDA: "C:\\Miniconda35-x64"
+        - CONDA: "C:\\Miniconda36-x64"
+        - CONDA: "C:\\Miniconda37-x64"
         - CONDA: "C:\\Miniconda34"
+        - CONDA: "C:\\Miniconda35"
+        - CONDA: "C:\\Miniconda36"
+        - CONDA: "C:\\Miniconda37"
 
 install:
-    - call %CONDA%\\Scripts\\activate.bat
+    - %CONDA%\\condabin\\conda.bat create -y --name default
+    - call %CONDA%\\Scripts\\activate.bat default
     - conda install -y setuptools pybind11
     - conda install -y -c conda-forge setuptools-rust
     - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
