@@ -42,6 +42,24 @@ Then, modify the ``__src`` folder contents:
 * Adjust ``module.cpp`` to include your function headers and add your functions to the PYBIND11_MODULE definition.
 * Add python wrappers for your functions to ``wrappers.py``.
 
+### Rust
+Before you create your own Rust modules, you can verify that your system is set up correctly by executing the ``testRust.py`` script.
+If everything is correct, you should see a bunch of compiler commands followed by ``Hello, world!``.
+
+The C++ version needs the following libraries:
+* setuptools
+* setuptools-rust
+
+Also, you obviously need a rust distribution that is compatible with pyo3.
+(At the time of writing, this is rust nightly. Should change in future.)
+
+To create your own Rust module, just copy and rename the ``helloWorldRustModule`` folder to wherever you want your module to be.
+
+Then, modify the ``__src`` folder contents:
+* Modify the folder like a normal cargo project. It is important that the module stays ``__lib``, though.
+* Add python wrappers for your functions to ``wrappers.py``.
+
+
 ## Tested Python Versions
 
 | Operating System | Python Version (C) | Python Version (C++) |
