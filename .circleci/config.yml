@@ -5,17 +5,9 @@ build_steps: &build_steps
         - checkout
         - run: wget --content-disposition https://sh.rustup.rs
         - run: sh rustup-init.sh -y --default-toolchain nightly
-        - run: sudo pip install setuptools setuptools-rust pybind11
+        - run: sudo pip install -r requirements.txt
         - run: python test.py
         - run: python testCpp.py
-        - run: source ~/.cargo/env; python testRust.py
-
-build_steps_rust: &build_steps_rust
-    steps:
-        - checkout
-        - run: wget --content-disposition https://sh.rustup.rs
-        - run: sh rustup-init.sh -y --default-toolchain nightly
-        - run: sudo pip install setuptools setuptools-rust
         - run: source ~/.cargo/env; python testRust.py
 
 jobs:
@@ -43,10 +35,6 @@ jobs:
         <<: *build_steps
         docker:
             - image: circleci/python:3.5
-    python-3.4:
-        <<: *build_steps_rust
-        docker:
-            - image: circleci/python:3.4
 
 workflows:
     version: 2
