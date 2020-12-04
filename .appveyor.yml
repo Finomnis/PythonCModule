@@ -8,7 +8,6 @@ platform:
     - x86
 
 environment:
-
     matrix:
         - CONDA: "C:\\Miniconda35"
           PYTHON_VERSION: "3.5"
@@ -17,6 +16,9 @@ environment:
           BUILD_RUST: True
         - CONDA: "C:\\Miniconda37"
           PYTHON_VERSION: "3.7"
+          BUILD_RUST: True
+        - CONDA: "C:\\Miniconda38"
+          PYTHON_VERSION: "3.8"
           BUILD_RUST: True
 
 install:
