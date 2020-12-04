@@ -1,0 +1,5 @@
+# for C++
+pybind11
+
+# for Rust
+setuptools_rust
