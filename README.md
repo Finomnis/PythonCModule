@@ -1,6 +1,6 @@
 # PythonCModule
 
-A simple python module that acts as an interface for C/C++/Rust code.
+A simple python module template that acts as an interface for C/C++/Rust code.
 
 It is specifically written and tested for Python 3.x, it does NOT work with Python 2.
 
