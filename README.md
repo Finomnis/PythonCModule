@@ -74,7 +74,7 @@ Then, modify the `__src` folder contents:
 For more information about how to write Rust code that interfaces with Python, read:
 
 -   https://pyo3.rs/
--   https://rust-numpy.github.io/rust-numpy
+-   https://docs.rs/numpy/
 -   https://docs.rs/ndarray/
 
 ## Tested Python Versions
